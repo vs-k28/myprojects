@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #ebadad;
+    overflow: hidden;
+}
+
+.magic {
+    background: #b74065;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: fixed;
+    top: 25px;
+    letter-spacing: 1px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.magic:hover {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.magic:active {
+    transform: translateY(3px) scale(0.98);
+    box-shadow: none;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.boxes.big {
+    width: 600px;
+    height: 600px;
+}
+
+.boxes.big .box {
+    transform: rotateZ(360deg);
+}
+
+.box {
+    background-image: url('https://i.gifer.com/4A5.gif');
+    /* gif from https://gifer.com */
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    position: relative;
+    height: 125px;
+    width: 125px;
+    transition: 0.4s ease;
+}
+
+.box::after {
+    content: '';
+    background-color: #cb8da1;
+    position: absolute;
+    top: 8px;
+    right: -15px;
+    height: 100%;
+    width: 15px;
+    transform: skewY(45deg);
+}
+
+.box::before {
+    content: '';
+    background-color: #ef7ea2;
+    position: absolute;
+    bottom: -15px;
+    left: 8px;
+    height: 15px;
+    width: 100%;
+    transform: skewX(45deg);
+}

@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    background-color: rgb(97, 199, 199);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    outline: hidden;
+}
+
+button {
+    padding: 20px 30px;
+    position: relative;
+    outline: none;
+    border: none;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+    font-size: 2rem;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button .circle {
+    position: absolute;
+    background-color: #8eb1bc;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%) scale(0);
+    animation: animate 0.4s ease-out;
+}
+
+button:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@keyframes animate {
+    0% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+    }
+}
