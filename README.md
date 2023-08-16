@@ -27,7 +27,7 @@ Description : "Keycode Explorer" is a keyboard-oriented project that showcases k
 
 ![screenshot](Images/keycode.png)
 
-Demo : Watch the demo video on [YouTube]().
+Demo : Watch the demo video on [YouTube](https://youtu.be/17wyCnnVixg).
 
 
 ## Acknowledgement
